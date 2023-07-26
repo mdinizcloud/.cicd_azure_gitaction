@@ -19,12 +19,12 @@ locals {
 }
 
 resource "azurerm_storage_account" "securestorage" {
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
-  name                     = var.storage_account_name
-  account_tier             = "Standard"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  name                = var.storage_account_name
+  account_tier        = "Standard"
   # If var.environment is equal Production do GRS, otherwise LBS
-  account_replication_type = var.environment == "Production" ? "GRS" : "LBS"
+  account_replication_type      = var.environment == "Production" ? "GRS" : "LBS"
   public_network_access_enabled = false
-  tags = local.tags
+  tags                          = local.tags
 }
