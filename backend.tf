@@ -7,7 +7,7 @@ terraform {
     }
   }
   cloud {
-    organization = "ACG_Azure_Lab"
+    organization = "ACG-Azure_Lab"
 
     workspaces {
       name = "azure"

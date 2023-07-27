@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "1-8b2fdf7a-playground-sandbox"
-  location = "West US"
+  name     = "1-0d931743-playground-sandbox"
+  location = "East US"
 }
 
 resource "azurerm_storage_account" "storage" {
@@ -15,6 +15,7 @@ resource "azurerm_storage_account" "storage" {
 locals {
   tags = {
     "Environment" = var.environment
+    "Type" = var.type
   }
 }
 
