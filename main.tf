@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "storage" {
 locals {
   tags = {
     "Environment" = var.environment
-    "Type" = var.type
+    "Type"        = var.type
   }
 }
 
