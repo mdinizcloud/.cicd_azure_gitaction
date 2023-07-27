@@ -1,12 +1,12 @@
 variable "resource_group_name" {
   type        = string
-  default     = "stgazure3112"
+  default     = "1-0d931743-playground-sandbox"
   description = "Resource Group Name"
 }
 
 variable "location" {
   type        = string
-  default     = "West US"
+  default     = "East US"
   description = "The Resource Location"
 }
 
@@ -20,4 +20,10 @@ variable "environment" {
   type        = string
   default     = "Production"
   description = "The environment either Production or Development"
+}
+
+variable "type" {
+  type        = string
+  default     = "EC2"
+  description = "Virtual Machine Example"
 }
